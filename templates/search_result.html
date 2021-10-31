@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMDB API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!--Custom Style-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+{% if data|length == 1 %}
+<body style="background-image: url({{ url_for('static', filename='b-img.jpg') }})">
+    <div class="container con">
+        <div class="row">
+        <div class="col-lg-6 col-md-8">
+            <img src="{{ data[0]['image'] }}" class="img">
+        </div>
+        <div class="col-lg-6 col-md-8 details">
+            <h1>{{ data[0]['title'] }}</h1>
+            <p>{{ data[0]['description'] }}</p>
+        </div>
+        </div>
+    </div>
+    <div class="container button">
+        <a class="btn btn-secondary" href="{{ url_for('search') }}">Go Back</a>
+    </div>
+</body>
+{% else %}
+<body style="background-image: url({{ url_for('static', filename='b-img.jpg') }})">
+    <div class="container button1">
+        <a class="btn btn-secondary" href="{{ url_for('other') }}">Go Back</a>
+    </div>
+    <div class="container con">
+        {% for i in range(data|length) %}
+        <div class="row Items">
+            {% if i%2 == 0 %}
+            <div class="col-lg-6">
+                <img src="{{ data[i]['image'] }}" class="img">
+            </div>
+            <div class="col-lg-6">
+                <h2>{{ data[i]['rank'] }}. {{ data[i]['fullTitle'] }}</h2>
+                <h4>IMDb rating: {{ data[i]['imDbRating'] }}</h4>
+                <p>Crew: {{ data[i]['crew'] }}</p>
+            </div>
+            {% else %}
+            <div class="col-lg-6">
+                <h2>{{ data[i]['rank'] }}. {{ data[i]['fullTitle'] }}</h2>
+                <h4>IMDb rating: {{ data[i]['imDbRating'] }}</h4>
+                <p>Crew: {{ data[i]['crew'] }}</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ data[i]['image'] }}" class="img">
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+{% endif %}
+</html>

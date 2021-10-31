@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.homepage {
+    padding: 10% 20%;
+}
+
+.homepage .container > div.row {
+    padding: 10% 15% 5%;
+}
+
+.description {
+    color: #F6F5F5;
+    font-family: 'Lobster', cursive;
+    padding: 0 10%;
+    opacity: 0.7;
+    font-size: 18px;
+    text-align: center;
+}
+
+.description > span {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.heading {
+    font-family: 'Lobster', cursive;
+    font-size: 80px;
+    text-align: center;
+    overflow: hidden;
+    color: #F6F5F5;
+}
+
+.homepage .container > div.row .item {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.homepage .container > div.row .i2 {
+    padding-left: 150px;
+}
+
+.btn {
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  border-radius: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-primary {
+  background-color: #1687A7;
+  border-color: #1687A7;
+}
+
+.btn-secondary {
+    font-size: 12px;
+    color: #F6F5F5;
+    background-color: #9D9D9D;
+    border-color: #9D9D9D;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #fff;
+  background-color: #276678;
+  border-color: #276678;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #fff;
+  background-color: #4A403A;
+  border-color: #4A403A;
+}
+
+/*Form*/
+.form {
+    padding-bottom: 5%;
+}
+
+.content {
+ padding: 5% 0;
+}
+
+.content > p {
+    color: #FF0000;
+}
+
+.help-block {
+    color: #FF0000;
+}
+
+.form-group {
+    padding: 2% 0;
+}
+
+.control-label {
+    font-family: 'Ubuntu', sans-serif;
+    color: #F6F5F5;
+    font-size: 20px;
+}
+
+#submit {
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+}
+
+.img {
+    position: relative;
+    height: auto;
+    max-width: 70%;
+}
+
+.con {
+    padding: 7% 5%;
+    padding-bottom: 3%;
+}
+
+.button {
+    text-align: center;
+}
+
+.button1 {
+    padding-top: 7%;
+    text-align: center;
+}
+
+.details {
+    color: #F6F5F5;
+    font-family: 'Nunito', sans-serif;
+}
+
+.Items {
+    padding: 7% 7%;
+}
+
+.Items > div > h2 {
+    color: #F6F5F5;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+.Items > div > h4 {
+    color: #F6F5F5;
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.Items > div > p {
+    color: #F6F5F5;
+    opacity: 0.7;
+    overflow: hidden;
+}
